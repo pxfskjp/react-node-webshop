@@ -1,6 +1,5 @@
 import React from "react";
-import {BrowserRouter, Route} from 'react-router-dom'
-import data from "./data";
+import {BrowserRouter, Route, Link} from 'react-router-dom'
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import "./App.css";
@@ -22,7 +21,7 @@ function App() {
             <button className="brand-button" onClick={openMenu}>
               &#9776;
             </button>
-            <a href="index.html">Amazing Webshop</a>
+            <Link to="/">Amazing Webshop</Link>
           </div>
           <div className="header-links">
             <a href="cart.html">Shopping Cart</a>
@@ -60,26 +59,7 @@ function App() {
           <div className="content">
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
-            <ul className="products">
-              {data.products.map((product) => (
-                <li>
-                  <div className="product">
-                    <img src={product.image} className="product-image" alt="product" />
-                    <div className="product-name">
-                      <a href="product.html">{product.name}</a>
-                    </div>
-                    <div className="product-brand">{product.brand}</div>
-                    <div className="product-price">
-                      ${product.price}
-                      <small> (100 gr)</small>
-                    </div>
-                    <div className="product-rating">
-                      {product.rating} Stars ({product.numReviews})
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+            
           </div>
         </main>
 
