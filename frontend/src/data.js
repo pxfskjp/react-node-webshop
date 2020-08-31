@@ -1,4 +1,4 @@
-export default data = {
+export default {
   products: [
     {
       name: "Assortment of spices",
@@ -15,8 +15,8 @@ export default data = {
       image: "images/asian-food3.jpeg",
       price: 37,
       brand: "India's Finest",
-      rating: 4.5,
-      numReviews: 10,
+      rating: 4,
+      numReviews: 8,
     },
     {
       name: "Assortment of spices",
@@ -24,8 +24,8 @@ export default data = {
       image: "images/asian-food2.jpeg",
       price: 37,
       brand: "India's Finest",
-      rating: 4.5,
-      numReviews: 10,
+      rating: 3.5,
+      numReviews: 3,
     },
     {
       name: "Assortment of spices",
@@ -34,7 +34,7 @@ export default data = {
       price: 37,
       brand: "India's Finest",
       rating: 4.5,
-      numReviews: 10,
+      numReviews: 14,
     },
     {
       name: "Assortment of rices",
@@ -42,8 +42,8 @@ export default data = {
       image: "images/asian-food5.jpeg",
       price: 7,
       brand: "India's Finest",
-      rating: 4.5,
-      numReviews: 10,
+      rating: 5,
+      numReviews: 17,
     },
     {
       name: "Assortment of spices",
@@ -61,7 +61,7 @@ export default data = {
       price: 37,
       brand: "India's Finest",
       rating: 4.5,
-      numReviews: 10,
+      numReviews: 7,
     },
     {
       name: "Assortment of spices",
@@ -69,8 +69,8 @@ export default data = {
       image: "images/asian-food4.jpeg",
       price: 37,
       brand: "India's Finest",
-      rating: 4.5,
-      numReviews: 10,
+      rating: 5,
+      numReviews: 6,
     },
     {
       name: "Assortment of rices",
