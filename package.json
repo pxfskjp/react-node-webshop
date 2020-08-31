@@ -1,0 +1,22 @@
+{
+  "name": "tutorial-react-node-webshop",
+  "version": "1.0.0",
+  "description": "Create an e-commerce shop in the context of a student project. The tutorial is by Basir Jafarzadeh([website](https://codingwithbasir.com)).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jethet/tutorial-react-node-webshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jethet/tutorial-react-node-webshop/issues"
+  },
+  "homepage": "https://github.com/Jethet/tutorial-react-node-webshop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

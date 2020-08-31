@@ -182,6 +182,7 @@ a:hover {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  padding: 1rem;
 }
 
 .details-image {
@@ -213,3 +214,32 @@ a:hover {
 .back-to-result {
   padding: 1rem;
 }
+
+.details-action {
+  border: .1rem #808080 solid;
+  border-radius: 0.5rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+}
+
+.details-action ul li:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  padding: 1rem;
+  border: .1rem #808080 solid;
+  cursor: pointer;
+  border-radius: .5rem;
+  background-color: rgb(1, 1, 145);
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.button:hover {
+  border: .1rem #404040 solid;
+}
+
+/* .button.primary {
+} */
