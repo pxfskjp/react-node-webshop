@@ -57,7 +57,9 @@ const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 plus add at the top of store.js:
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 
-4) Create folder for actions and add files for separate actions.
+4) Create folder for actions and add files for separate actions. 
+
+5) Create folder for constants and create a constant for each action: REQUEST, SUCCESS, FAIL.
 
 
 
