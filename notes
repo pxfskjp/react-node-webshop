@@ -48,8 +48,16 @@ ReactDOM.render(
 );
 
 3) Add applyMiddleware(thunk) to store:
-const store = createStore(reducer, initialState, compose(applyMiddleware(thunk)));
+const store = createStore(reducer, initialState, composeEnhancer(applyMiddleware(thunk)));
 thunk is middleware for Redux that allows running async operations inside action in Redux.
 Install it with npm i redux-thunk, and add to store.js:
 import thunk from "redux-thunk"
+composeEnhancer should be added:
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+plus add at the top of store.js:
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+
+4) Create folder for actions and add files for separate actions.
+
+
 
