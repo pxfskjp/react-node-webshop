@@ -1,7 +1,7 @@
 export default {
   products: [
     {
-      _id: 1,
+      _id: "1",
       name: "Assortment of spices",
       category: "Spices",
       image: "images/asian-food1.jpeg",
@@ -11,7 +11,7 @@ export default {
       numReviews: 10,
     },
     {
-      _id: 2,
+      _id: "2",
       name: "Spices in any quantity",
       category: "Chutneys",
       image: "images/asian-food3.jpeg",
@@ -21,7 +21,7 @@ export default {
       numReviews: 8,
     },
     {
-      _id: 3,
+      _id: "3",
       name: "Assortment of spices",
       category: "Oils",
       image: "images/asian-food2.jpeg",
@@ -31,7 +31,7 @@ export default {
       numReviews: 3,
     },
     {
-      _id: 4,
+      _id: "4",
       name: "Assortment of spices",
       category: "Spices",
       image: "images/asian-food4.jpeg",
@@ -41,7 +41,7 @@ export default {
       numReviews: 14,
     },
     {
-      _id: 5,
+      _id: "5",
       name: "Assortment of rices",
       category: "Rice",
       image: "images/asian-food5.jpeg",
@@ -51,7 +51,7 @@ export default {
       numReviews: 17,
     },
     {
-      _id: 6,
+      _id: "6",
       name: "Assortment of spices",
       category: "Spices",
       image: "images/asian-food2.jpeg",
@@ -61,7 +61,7 @@ export default {
       numReviews: 10,
     },
     {
-      _id: 7,
+      _id: "7",
       name: "Assortment of spices",
       category: "Oils",
       image: "images/asian-food1.jpeg",
@@ -71,7 +71,7 @@ export default {
       numReviews: 7,
     },
     {
-      _id: 8,
+      _id: "8",
       name: "Assortment of spices",
       category: "Flour",
       image: "images/asian-food4.jpeg",
@@ -81,7 +81,7 @@ export default {
       numReviews: 6,
     },
     {
-      _id: 9,
+      _id: "9",
       name: "Assortment of rices",
       category: "Rice",
       image: "images/asian-food5.jpeg",
