@@ -2,7 +2,7 @@ import React from "react";
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
-import "./App.css";
+import "./style.css";
 
 function App() {
   const openMenu = () => {
