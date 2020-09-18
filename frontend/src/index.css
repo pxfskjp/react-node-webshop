@@ -44,6 +44,7 @@ body {
 .header-links a {
   color: #fffef9;
   text-decoration: none;
+  margin-right: 10px;
 }
 
 .header-links a:hover {

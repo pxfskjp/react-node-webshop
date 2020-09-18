@@ -7,12 +7,13 @@ import {
   PRODUCT_DETAILS_FAIL,
 } from "../constants/productConstants";
 
+// a reducer takes two parameters: state (initially empty) and action
 function productListReducer(state = { products: [] }, action) {
   switch (action.type) {
     case PRODUCT_LIST_REQUEST:
       return { loading: true };
-    case PRODUCT_LIST_SUCCESS:
-      return { loading: false, products: action.payload };
+    case PRODUCT_LIST_SUCCESS:  // this means we get the data from the server
+      return { loading: false, products: action.payload };  // payload: WHAT should change
     case PRODUCT_LIST_FAIL:
       return { loading: false, error: action.payload };
     default:

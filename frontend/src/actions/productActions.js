@@ -11,6 +11,8 @@ import {
 
 const listProducts = () => async (dispatch) => {
   try {
+    // dispatch always has a type; when it returns data from the 
+    // server (SUCCESS) it has a type plus a payload
     dispatch({ type: PRODUCT_LIST_REQUEST });
     const { data } = await axios.get("/api/products");
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
