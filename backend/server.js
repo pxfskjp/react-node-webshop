@@ -3,6 +3,7 @@ import data from "./data";
 
 const app = express();
 
+//create endpoint for path to one product
 app.get("/api/products/:id", (req, res) => {
   const productId = req.params.id;
   const product = data.products.find((x) => x._id === productId);
@@ -10,6 +11,7 @@ app.get("/api/products/:id", (req, res) => {
   else res.status(404).send({ msg: "Product Not Found" });
 });
 
+//create endpoint for path to all products (overview)
 app.get("/api/products", (req, res) => {
   res.send(data.products);
 });
