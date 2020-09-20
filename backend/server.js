@@ -1,11 +1,9 @@
 import express from "express";
 import data from "./data";
-import dotenv from "dotenv"
 import config from "./config"
 import mongoose from "mongoose"
 import userRoute from "./routes/userRoute"
 
-dotenv.config()
 
 const mongodbUrl = config.MONGODB_URL
 mongoose.connect(mongodbUrl, {
@@ -14,6 +12,7 @@ mongoose.connect(mongodbUrl, {
 
 const app = express();
 
+// the basic route is concatenated with the user router in userRoute
 app.use("api/users", userRoute)
 
 
