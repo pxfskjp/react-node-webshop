@@ -3,6 +3,7 @@ import data from "./data";
 import dotenv from "dotenv"
 import config from "./config"
 import mongoose from "mongoose"
+import userRoute from "./routes/userRoute"
 
 dotenv.config()
 
@@ -12,6 +13,9 @@ mongoose.connect(mongodbUrl, {
 }).catch(error => console.log(error.reason))
 
 const app = express();
+
+app.use("api/users", userRoute)
+
 
 //create endpoint for path to one product
 app.get("/api/products/:id", (req, res) => {
