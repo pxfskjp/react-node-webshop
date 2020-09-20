@@ -1,9 +1,12 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
+import Cookie from "js-cookie";
 import { productListReducer, productDetailsReducer } from "./reducers/productReducers";
 import { cartReducer } from "./reducers/cartReducers"
 
-const initialState = {};
+const cartItems = Cookie.getJSON("cartItems") || []
+
+const initialState = { cart: {cartItems} };
 
 // reducer is a function that gets a state and action,
 // and returns a new state based on that action
