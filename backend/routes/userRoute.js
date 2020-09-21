@@ -8,15 +8,15 @@ router.get("/createadmin", async (req, res) => {
     const user = new User({
       name: "Henriette",
       email: "henriette.hettinga@protonmail.com",
-      password: "123456",
+      password: "1234",
       isAdmin: true,
     });
 
     const newUser = await user.save();
     res.send(newUser);
   } catch (error) {
-    res.send({ msg: error.message })
+    res.send({ msg: error.message });
   }
 });
 
-export default router
+export default router;
