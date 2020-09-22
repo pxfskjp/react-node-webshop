@@ -17,6 +17,14 @@ button {
   font-size: 1.6rem;
 }
 
+button:hover {
+  color: rgb(245, 134, 7);
+}
+
+.text-center {
+  text-align: center;
+}
+
 .full-width {
   width: 100%;
 }
@@ -291,7 +299,6 @@ a:hover {
 .cart-list-container li img {
   max-width: 20rem;
   max-height: 20rem;
-  
 }
 
 .cart-list-container li:first-child {
@@ -323,5 +330,33 @@ a:hover {
   font-weight: 500;
 }
 
-/* .button.primary {
-} */
+/* FORMS */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+  padding: 2rem;
+  border: 0.1rem rgb(1, 1, 145) solid;
+  border-radius: 0.5rem;
+  list-style: none;
+}
+
+.form-container li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+input {
+  padding: 1rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+}
