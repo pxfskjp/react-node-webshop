@@ -1,11 +1,12 @@
 import express from "express";
-// import { sign } from "jsonwebtoken";
 import User from "../models/userModel";
-import { getToken } from "../util"
+import { getToken } from "../util";
+import { sign } from "jsonwebtoken";
 
 const router = express.Router();
 
 router.post("/signin", async (req, res) => {
+
   const signinUser = await User.findOne({
     email: req.body.email,
     password: req.body.password,
@@ -16,8 +17,10 @@ router.post("/signin", async (req, res) => {
       name: signinUser.name,
       email: signinUser.email,
       isAdmin: signinUser.isAdmin,
-      token: getToken(signinUser)
+      token: getToken(signinUser),
     });
+
+    
   } else {
     res.status(401).send({ message: "Invalid Email or Password" });
   }
