@@ -6,8 +6,9 @@ import { cartReducer } from "./reducers/cartReducers"
 import { userSigninReducer } from "./reducers/userReducers";
 
 const cartItems = Cookie.getJSON("cartItems") || []
+const userInfo = Cookie.getJSON("userInfo") || null
 
-const initialState = { cart: {cartItems} };
+const initialState = { cart: {cartItems}, userSignin: { userInfo } };
 
 // reducer is a function that gets a state and action,
 // and returns a new state based on that action

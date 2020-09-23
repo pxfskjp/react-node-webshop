@@ -1,8 +1,11 @@
 import express from "express";
+import mongoose from "mongoose";
+import bodyParser from "body-parser"
+// import fileUpload from "express-fileupload"
+// import path from "path"
 import data from "./data";
 import config from "./config";
 import dotenv from "dotenv";
-import mongoose from "mongoose";
 import userRoute from "./routes/userRoute";
 
 dotenv.config();
@@ -17,6 +20,8 @@ mongoose
   .catch((error) => console.log(error.reason));
 
 const app = express();
+
+app.use(bodyParser.json())
 
 // the basic route is concatenated with the user router in userRoute
 app.use("api/users", userRoute);
