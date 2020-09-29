@@ -30,7 +30,12 @@ function App() {
           </div>
           <div className="header-links">
             <a href="cart.html">Shopping Cart</a>
-            <Link to="/signin"></Link>
+            {userInfo ? (
+              <Link to="/profile">{userInfo.name}</Link>
+            ) : (
+              <Link to="/signin"></Link>
+            )}
+
             <a href="signin.html">Sign In</a>
           </div>
         </header>

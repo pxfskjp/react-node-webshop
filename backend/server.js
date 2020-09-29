@@ -1,8 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser"
-// import fileUpload from "express-fileupload"
-// import path from "path"
 import data from "./data";
 import config from "./config";
 import dotenv from "dotenv";

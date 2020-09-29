@@ -38,7 +38,7 @@ router.get("/createadmin", async (req, res) => {
     const newUser = await user.save();
     res.send(newUser);
   } catch (error) {
-    res.send({ msg: error.message });
+    res.send({ message: error.message });
   }
 });
 
