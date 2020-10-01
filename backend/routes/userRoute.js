@@ -5,19 +5,18 @@ import { sign } from "jsonwebtoken";
 
 const router = express.Router();
 
-router.post("/register", async (req, res) => {
-
-  const newUser = await User.findOne({
+router.post("/signin", async (req, res) => {
+  const signinUser = await User.findOne({
     email: req.body.email,
     password: req.body.password,
   });
-  if (newUser) {
+  if (signinUser) {
     res.send({
-      _id: newUser.id,
-      name: newUser.name,
-      email: newUser.email,
-      isAdmin: newUser.isAdmin,
-      token: getToken(newUser),
+      _id: signinUser.id,
+      name: signinUser.name,
+      email: signinUser.email,
+      isAdmin: signinUser.isAdmin,
+      token: getToken(signinUser),
     });
 
   } else {
