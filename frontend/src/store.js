@@ -2,13 +2,13 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import Cookie from "js-cookie";
 import { productListReducer, productDetailsReducer } from "./reducers/productReducers";
-import { cartReducer } from "./reducers/cartReducers"
-import { userSigninReducer } from "./reducers/userReducers";
+import { cartReducer } from "./reducers/cartReducers";
+import { userRegisterReducer, userSigninReducer } from "./reducers/userReducers";
 
-const cartItems = Cookie.getJSON("cartItems") || []
-const userInfo = Cookie.getJSON("userInfo") || null
+const cartItems = Cookie.getJSON("cartItems") || [];
+const userInfo = Cookie.getJSON("userInfo") || null;
 
-const initialState = { cart: {cartItems}, userSignin: { userInfo } };
+const initialState = { cart: { cartItems }, userSignin: { userInfo } };
 
 // reducer is a function that gets a state and action,
 // and returns a new state based on that action
@@ -16,7 +16,8 @@ const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
   cart: cartReducer,
-  userSignin: userSigninReducer
+  userSignin: userSigninReducer,
+  userRegister: userRegisterReducer,
 });
 
 // The Redux Devtools code line 11 is taken from the GitHub repo
