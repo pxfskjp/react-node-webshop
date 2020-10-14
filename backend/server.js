@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import mongoose from "mongoose";
 import bodyParser from "body-parser"
 import data from "./data";
@@ -6,7 +7,7 @@ import config from "./config";
 import dotenv from "dotenv";
 import userRoute from "./routes/userRoute";
 
-dotenv.config();
+// dotenv.config();
 
 const mongodbUrl = config.MONGODB_URL;
 mongoose
@@ -22,7 +23,7 @@ const app = express();
 app.use(bodyParser.json())
 
 // the basic route is concatenated with the user router in userRoute
-app.use("api/users", userRoute);
+app.use("/api/users", userRoute);
 
 //create endpoint for path to one product
 app.get("/api/products/:id", (req, res) => {

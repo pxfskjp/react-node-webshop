@@ -1,7 +1,6 @@
 import express from "express";
 import User from "../models/userModel";
 import { getToken } from "../util";
-import { sign } from "jsonwebtoken";
 
 const router = express.Router();
 
