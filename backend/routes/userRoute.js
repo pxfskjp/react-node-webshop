@@ -15,11 +15,11 @@ router.post("/signin", async (req, res) => {
       name: signinUser.name,
       email: signinUser.email,
       isAdmin: signinUser.isAdmin,
-      token: getToken(signinUser),
+      token: getToken(signinUser)
     });
 
   } else {
-    res.status(401).send({ message: "Invalid Email or Password" });
+    res.status(401).send({ msg: "Invalid Email or Password." });
   }
 });
 
@@ -40,7 +40,7 @@ router.post("/register", async (req, res) => {
     });
 
   } else {
-    res.status(401).send({ message: "Invalid User Data" });
+    res.status(401).send({ msg: "Invalid User Data" });
   }
 });
 
@@ -56,7 +56,7 @@ router.get("/createadmin", async (req, res) => {
     const newUser = await user.save();
     res.send(newUser);
   } catch (error) {
-    res.send({ message: error.message });
+    res.send({ msg: error.message });
   }
 });
 
